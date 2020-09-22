@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>naive bayes on Core Dumps</title>
+    <link>https://amitab.github.io/tags/naive-bayes/</link>
+    <description>Recent content in naive bayes on Core Dumps</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>adas59@asu.edu (Amitabh Das)</managingEditor>
+    <webMaster>adas59@asu.edu (Amitabh Das)</webMaster>
+    <lastBuildDate>Tue, 21 Jul 2015 18:34:02 +0000</lastBuildDate><atom:link href="https://amitab.github.io/tags/naive-bayes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sentiment Analysis with Naivety</title>
+      <link>https://amitab.github.io/post/sentiment/</link>
+      <pubDate>Tue, 21 Jul 2015 18:34:02 +0000</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/post/sentiment/</guid>
+      <description>Back in my 6th Semeseter in the subject Theory and Foundation of Computaion and Automata, I was introduced to Conditional probability. I was excited to learn how I could use this to build something nice, and came across classifiers.
+Lets talk Naive Bayes&amp;hellip; a really naive implementation of a classifier.
+Applying conditional probability to ascertain the sentiment of a sentence is easy to achieve. The formula goes as follows:
+Let: WifS = Probability of word for a sentiment S = Probability of a sentiment X = WifS * S WifnotS = Probability of word for all sentiments except the one you&amp;#39;re looking for notS = Probability of all sentiments except the one you&amp;#39;re looking for Then, probability of a sentiment if word = X / ( X + WifnotS * notS) Next, all we do is multiply the probability we get above for each word and get the probability of a sentiment for a sentence.</description>
+    </item>
+    
+  </channel>
+</rss>

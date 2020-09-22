@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Core Dumps</title>
+    <link>https://amitab.github.io/</link>
+    <description>Recent content on Core Dumps</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>adas59@asu.edu (Amitabh Das)</managingEditor>
+    <webMaster>adas59@asu.edu (Amitabh Das)</webMaster>
+    <lastBuildDate>Sun, 08 Dec 2019 18:00:00 +0730</lastBuildDate><atom:link href="https://amitab.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Classification with Personalized Page Ranking</title>
+      <link>https://amitab.github.io/post/ppr-clasification/</link>
+      <pubDate>Sun, 08 Dec 2019 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/post/ppr-clasification/</guid>
+      <description>Personalized Page Ranking Page Ranking Algorithm was briefly described in the previous post. The previous few posts experimented with the used of PPR in recommendations and relevance feedback. In this post, classification of images is attemped using PPR.
+Can we even classify images using this algorithm? PPR is a graph algorithm that can be used to find the importance of nodes in the graph. So how can this algorithm be used to classify images?</description>
+    </item>
+    
+    <item>
+      <title>Relevance Feedback with Personalized Page Ranking</title>
+      <link>https://amitab.github.io/post/ppr-feedback/</link>
+      <pubDate>Wed, 20 Nov 2019 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/post/ppr-feedback/</guid>
+      <description>Page Ranking Algorithm Page Ranking Algorithm was briefly described in the previous post This post details experimenting with relevance feedback using PPR.
+Using feedback from the user to fine tune our Recommendations We already have our graph from before.
+In this scenario, we assume we have some sort of preferences of the user. Maybe the user has viewed some images before and marked some of the images as relevant and some as irrelevant.</description>
+    </item>
+    
+    <item>
+      <title>Recommendation with Personalized Page Ranking</title>
+      <link>https://amitab.github.io/post/ppr-rec/</link>
+      <pubDate>Tue, 05 Nov 2019 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/post/ppr-rec/</guid>
+      <description>Page Ranking Algorithm Page Ranking Algorithm is a graph-based algorithm. It’s an interesting technique to learn of the importance of nodes in a graph. Not only that, this algorithm can be modified to do cool things like finding importance based on custom criteria.
+This semester, I learnt about Page Ranking in a graduate course called “Multimedia and Web Databases”. It’s a project heavy course, and it gives a good opportunity to experiment different use cases with different algorithms.</description>
+    </item>
+    
+    <item>
+      <title>Non-Negative Matrix Factorization</title>
+      <link>https://amitab.github.io/post/nmf/</link>
+      <pubDate>Wed, 02 Oct 2019 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/post/nmf/</guid>
+      <description>Non-Negative Matrix Factorization I recently took the course “Multimedia and Web Databases” and we learnt to use feature reduction techniques to reduce the dimensionality of the multimedia data. This is done so that we can scan the entire database (relatively) fast for approximately similar data.
+One of our project tasks involved using NMF to find top ‘k’ images closest to a given image in the Euclidean space. Our project can be found here.</description>
+    </item>
+    
+    <item>
+      <title>FZF all the things!</title>
+      <link>https://amitab.github.io/post/fzf/</link>
+      <pubDate>Fri, 28 Jul 2017 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/post/fzf/</guid>
+      <description>For those who don&amp;rsquo;t know what it is, I suggest you check this out. It is more or less a tool to filter out lines, and it does that fast. I used it mainly for what the ready made script was for until I realized that I could replace many vim plugins with this!
+Replacing the project search: Ok, to be fair the fzf.vim comes with the search integration. But you can extend this to be far more powerful to your workflow than you can imagine!</description>
+    </item>
+    
+    <item>
+      <title>Versions of madness</title>
+      <link>https://amitab.github.io/post/versions/</link>
+      <pubDate>Fri, 17 Mar 2017 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/post/versions/</guid>
+      <description>Does your product support multiple versions of a particular language? Older versions of that language? (I feel you bruh)
+I work on a product which supports multiple versions of python. Now don’t get me wrong, python is an amazing language. Currently, we are supporting 2.7.x and 3.3.x.
+Like that wasn’t enough, there are a few hair-ripping changes from versions &amp;lt; 2.7.9 which I discovered recently. SSL is a total wreck in 2.</description>
+    </item>
+    
+    <item>
+      <title>Cannot reproduce</title>
+      <link>https://amitab.github.io/post/repro/</link>
+      <pubDate>Mon, 02 Jan 2017 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/post/repro/</guid>
+      <description>So the QA is like: We cannot sign off on the release of the product cuz of these bugs! And the Dev is all like: I cannot reproduce these bugs!
+Must be a Deja vu for many.
+We don&amp;rsquo;t know who or what is wrong. It could be an anomaly on the Dev&amp;rsquo;s environment or in the QA&amp;rsquo;s environment. Safe to say, we not only need to reproduce the code for the bug, we also need to be able to reproduce the same environment to locate the actual reason for these bugs.</description>
+    </item>
+    
+    <item>
+      <title>Lost and Found</title>
+      <link>https://amitab.github.io/post/lost/</link>
+      <pubDate>Thu, 22 Sep 2016 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/post/lost/</guid>
+      <description>So, last week, I was cleaning up my disk partition to free up some of the space all those auto-generated files, created by makefiles and other confidential stuff, took up. Then I open up a new terminal tab and suddenly I see this:  NOOOOOOOOOO!!! I lost all my utility scripts!! - Me
+ This is it.
+I have to actually write down the full commands now. At this point, I gave up on the bug I was working on and was about to go downstairs for a cup of coffee.</description>
+    </item>
+    
+    <item>
+      <title>Passing the Baton</title>
+      <link>https://amitab.github.io/post/baton/</link>
+      <pubDate>Mon, 11 Jul 2016 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/post/baton/</guid>
+      <description>In my last post I said that I would write about another design pattern for semaphores – passing the baton. This is the continuation of my previous post. Here is the link to my previous post: A Semaphore Story What we know Let’s look at the incorrect solution to the previous problem.
+mutex.wait() # Case 3. Wait for table_empty signal if customers == 5 || waiting &amp;gt; 0: waiting += 1 mutex.</description>
+    </item>
+    
+    <item>
+      <title>A Semaphore Story</title>
+      <link>https://amitab.github.io/post/semaphore/</link>
+      <pubDate>Wed, 08 Jun 2016 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/post/semaphore/</guid>
+      <description>In one of my recent interviews, I was asked this one problem based on semaphores which was quite challenging. I love interviews where I use the concepts I have learnt and need to derive the answer to a complex problem using the base concepts I know of. In this case, I had learnt about semaphores back in engineering and still remains one of my favorite OS concepts.
+The Situation So the interviewer asks “So, what&amp;rsquo;s your favorite restaurant?</description>
+    </item>
+    
+    <item>
+      <title>Javascript - &#34;this&#34; is awesome</title>
+      <link>https://amitab.github.io/post/this/</link>
+      <pubDate>Tue, 19 Apr 2016 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/post/this/</guid>
+      <description>For those of you coming from the Java, C++ side of programming, this keyword is bound to trip you sometime. In programming languages such as C++, you use it in context of classes and objects.
+Does that mean JavaScript has classes? Yes and No. You can emulate classes in JavaScript but calling them classes is as good as calling tomato a vegetable. Although according ECMAScript 2015 (ES6) standards, classes have been introduced to JavaScript.</description>
+    </item>
+    
+    <item>
+      <title>Testing, Testing... 1, 2, 3</title>
+      <link>https://amitab.github.io/post/testing/</link>
+      <pubDate>Tue, 19 Apr 2016 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/post/testing/</guid>
+      <description>I am a developer. I don’t care about testing. – The young developer
+ Of course it starts like that. And right when you are presenting your project in front of others, you realize that the feature isn’t working. My god, what a terrifying situation.
+Then you realize the importance of testing. You find out about the different types of testing, and how you wish that you had written tests for each feature/fix you committed so that the problem would have been caught immediately.</description>
+    </item>
+    
+    <item>
+      <title>Adventures with Atom</title>
+      <link>https://amitab.github.io/post/atom/</link>
+      <pubDate>Thu, 03 Mar 2016 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/post/atom/</guid>
+      <description>Quite recently I came across this new Text Editor by Github, called the Atom editor. Everything from its description to its UI was eye catching and I really wanted to give it a shot.
+And&amp;hellip;
+My thoughts What I loved the most about atom was its community. They have got a plethora of packages, providing a host of features to improve and speed up your daily tasks. For example – They have got a Git plugin (since it’s from Github) and with the right key bindings, you don’t ever have to look at a terminal!</description>
+    </item>
+    
+    <item>
+      <title>Vim - The programmable editors</title>
+      <link>https://amitab.github.io/post/vim/</link>
+      <pubDate>Wed, 10 Feb 2016 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/post/vim/</guid>
+      <description>The first lines of code I ever wrote was in an editor which had plenty of the features bundled in. But the funny thing was that you would never use most of them.
+The code editor I am talking about is Eclipse. Now don&amp;rsquo;t get me wrong, it is an awesome code editor. It&amp;rsquo;s just that it was memory intensive and and because of that it ran slow. And my PC isn&amp;rsquo;t something I can boast about.</description>
+    </item>
+    
+    <item>
+      <title>Git Gud</title>
+      <link>https://amitab.github.io/post/git-gud/</link>
+      <pubDate>Mon, 07 Dec 2015 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/post/git-gud/</guid>
+      <description>After goofing around the last month, I suddenly had multiple bugs thrown at me. Well it came as a relief actually, since I was getting real bored of watching TV shows everyday.
+The Situation Alright so these guys here have a different way of working on the code base than the way I previously experienced in my internship.
+So we have a bug, and a main branch on to which our fix should go to.</description>
+    </item>
+    
+    <item>
+      <title>Line up all the things!</title>
+      <link>https://amitab.github.io/post/line-it-up/</link>
+      <pubDate>Mon, 26 Oct 2015 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/post/line-it-up/</guid>
+      <description>If you are a Web Designer, at least once in your life, you must have come across a situation where you needed to line up elements side by side, or tried to understand why each element behaves the way it does while lining them up. Here are a list of various ways to achieve this goal.
+Float .container {} .container .items { float: left; } .container .clarity { clear: both; } Oldest solution in the book.</description>
+    </item>
+    
+    <item>
+      <title>The &#39;you&#39; UX and UI</title>
+      <link>https://amitab.github.io/post/you-ui/</link>
+      <pubDate>Sat, 12 Sep 2015 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/post/you-ui/</guid>
+      <description>There are 2 types of websites in the World Wide Web - The kinds which are easy and pleasant to use, and the other which makes you want to tear at your hair.
+And with the ease of creating websites these days, there are thousands of self-proclaimed web developers cropping up like weed every other day. In fact I’ve had the pleasure to work with some of them myself. A few days of crash course and they believe that they are “ready”.</description>
+    </item>
+    
+    <item>
+      <title>Proxy Problems</title>
+      <link>https://amitab.github.io/post/proxy/</link>
+      <pubDate>Thu, 27 Aug 2015 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/post/proxy/</guid>
+      <description>Just completed the campus to corporate training at Oracle MySQL and ready to start! At the end of our training, we were given a task to complete to “refresh our C++ skills”.
+We were to design a program which would simulate MySQL on a smaller scale – Multiple clients, shared data structures, locks and a few more features.
+Of course I started off almost immediately but I came across a problem.</description>
+    </item>
+    
+    <item>
+      <title>Sentiment Analysis with Naivety</title>
+      <link>https://amitab.github.io/post/sentiment/</link>
+      <pubDate>Tue, 21 Jul 2015 18:34:02 +0000</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/post/sentiment/</guid>
+      <description>Back in my 6th Semeseter in the subject Theory and Foundation of Computaion and Automata, I was introduced to Conditional probability. I was excited to learn how I could use this to build something nice, and came across classifiers.
+Lets talk Naive Bayes&amp;hellip; a really naive implementation of a classifier.
+Applying conditional probability to ascertain the sentiment of a sentence is easy to achieve. The formula goes as follows:
+Let: WifS = Probability of word for a sentiment S = Probability of a sentiment X = WifS * S WifnotS = Probability of word for all sentiments except the one you&amp;#39;re looking for notS = Probability of all sentiments except the one you&amp;#39;re looking for Then, probability of a sentiment if word = X / ( X + WifnotS * notS) Next, all we do is multiply the probability we get above for each word and get the probability of a sentiment for a sentence.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://amitab.github.io/page/about/</link>
+      <pubDate>Sat, 08 Nov 2014 16:42:18 +0400</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/page/about/</guid>
+      <description>Hello, I&amp;rsquo;m Amitabh Das I am a Computer Science Graduate student at Arizona State University. I completed my Undergraduate in BMS College of Engineering, Bangalore in 2015, with a major in Information Science.
+From the end of my Undergrad to the start of Grad School, I was working at Oracle, MySQL. Here, I got the chance to explore different areas of Computer Science. I found myself particularly interested in Storage/Database Systems and Distributed Systems.</description>
+    </item>
+    
+  </channel>
+</rss>

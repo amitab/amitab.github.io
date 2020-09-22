@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bash on Core Dumps</title>
+    <link>https://amitab.github.io/tags/bash/</link>
+    <description>Recent content in bash on Core Dumps</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>adas59@asu.edu (Amitabh Das)</managingEditor>
+    <webMaster>adas59@asu.edu (Amitabh Das)</webMaster>
+    <lastBuildDate>Thu, 22 Sep 2016 18:00:00 +0730</lastBuildDate><atom:link href="https://amitab.github.io/tags/bash/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lost and Found</title>
+      <link>https://amitab.github.io/post/lost/</link>
+      <pubDate>Thu, 22 Sep 2016 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/post/lost/</guid>
+      <description>So, last week, I was cleaning up my disk partition to free up some of the space all those auto-generated files, created by makefiles and other confidential stuff, took up. Then I open up a new terminal tab and suddenly I see this:  NOOOOOOOOOO!!! I lost all my utility scripts!! - Me
+ This is it.
+I have to actually write down the full commands now. At this point, I gave up on the bug I was working on and was about to go downstairs for a cup of coffee.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ui on Core Dumps</title>
+    <link>https://amitab.github.io/tags/ui/</link>
+    <description>Recent content in ui on Core Dumps</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>adas59@asu.edu (Amitabh Das)</managingEditor>
+    <webMaster>adas59@asu.edu (Amitabh Das)</webMaster>
+    <lastBuildDate>Sat, 12 Sep 2015 18:00:00 +0730</lastBuildDate><atom:link href="https://amitab.github.io/tags/ui/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The &#39;you&#39; UX and UI</title>
+      <link>https://amitab.github.io/post/you-ui/</link>
+      <pubDate>Sat, 12 Sep 2015 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/post/you-ui/</guid>
+      <description>There are 2 types of websites in the World Wide Web - The kinds which are easy and pleasant to use, and the other which makes you want to tear at your hair.
+And with the ease of creating websites these days, there are thousands of self-proclaimed web developers cropping up like weed every other day. In fact I’ve had the pleasure to work with some of them myself. A few days of crash course and they believe that they are “ready”.</description>
+    </item>
+    
+  </channel>
+</rss>

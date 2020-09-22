@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>semaphores on Core Dumps</title>
+    <link>https://amitab.github.io/tags/semaphores/</link>
+    <description>Recent content in semaphores on Core Dumps</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>adas59@asu.edu (Amitabh Das)</managingEditor>
+    <webMaster>adas59@asu.edu (Amitabh Das)</webMaster>
+    <lastBuildDate>Mon, 11 Jul 2016 18:00:00 +0730</lastBuildDate><atom:link href="https://amitab.github.io/tags/semaphores/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Passing the Baton</title>
+      <link>https://amitab.github.io/post/baton/</link>
+      <pubDate>Mon, 11 Jul 2016 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/post/baton/</guid>
+      <description>In my last post I said that I would write about another design pattern for semaphores – passing the baton. This is the continuation of my previous post. Here is the link to my previous post: A Semaphore Story What we know Let’s look at the incorrect solution to the previous problem.
+mutex.wait() # Case 3. Wait for table_empty signal if customers == 5 || waiting &amp;gt; 0: waiting += 1 mutex.</description>
+    </item>
+    
+    <item>
+      <title>A Semaphore Story</title>
+      <link>https://amitab.github.io/post/semaphore/</link>
+      <pubDate>Wed, 08 Jun 2016 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/post/semaphore/</guid>
+      <description>In one of my recent interviews, I was asked this one problem based on semaphores which was quite challenging. I love interviews where I use the concepts I have learnt and need to derive the answer to a complex problem using the base concepts I know of. In this case, I had learnt about semaphores back in engineering and still remains one of my favorite OS concepts.
+The Situation So the interviewer asks “So, what&amp;rsquo;s your favorite restaurant?</description>
+    </item>
+    
+  </channel>
+</rss>

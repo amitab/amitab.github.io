@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>machine learning on Core Dumps</title>
+    <link>https://amitab.github.io/tags/machine-learning/</link>
+    <description>Recent content in machine learning on Core Dumps</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>adas59@asu.edu (Amitabh Das)</managingEditor>
+    <webMaster>adas59@asu.edu (Amitabh Das)</webMaster>
+    <lastBuildDate>Sun, 08 Dec 2019 18:00:00 +0730</lastBuildDate><atom:link href="https://amitab.github.io/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Classification with Personalized Page Ranking</title>
+      <link>https://amitab.github.io/post/ppr-clasification/</link>
+      <pubDate>Sun, 08 Dec 2019 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/post/ppr-clasification/</guid>
+      <description>Personalized Page Ranking Page Ranking Algorithm was briefly described in the previous post. The previous few posts experimented with the used of PPR in recommendations and relevance feedback. In this post, classification of images is attemped using PPR.
+Can we even classify images using this algorithm? PPR is a graph algorithm that can be used to find the importance of nodes in the graph. So how can this algorithm be used to classify images?</description>
+    </item>
+    
+    <item>
+      <title>Relevance Feedback with Personalized Page Ranking</title>
+      <link>https://amitab.github.io/post/ppr-feedback/</link>
+      <pubDate>Wed, 20 Nov 2019 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/post/ppr-feedback/</guid>
+      <description>Page Ranking Algorithm Page Ranking Algorithm was briefly described in the previous post This post details experimenting with relevance feedback using PPR.
+Using feedback from the user to fine tune our Recommendations We already have our graph from before.
+In this scenario, we assume we have some sort of preferences of the user. Maybe the user has viewed some images before and marked some of the images as relevant and some as irrelevant.</description>
+    </item>
+    
+    <item>
+      <title>Recommendation with Personalized Page Ranking</title>
+      <link>https://amitab.github.io/post/ppr-rec/</link>
+      <pubDate>Tue, 05 Nov 2019 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/post/ppr-rec/</guid>
+      <description>Page Ranking Algorithm Page Ranking Algorithm is a graph-based algorithm. It’s an interesting technique to learn of the importance of nodes in a graph. Not only that, this algorithm can be modified to do cool things like finding importance based on custom criteria.
+This semester, I learnt about Page Ranking in a graduate course called “Multimedia and Web Databases”. It’s a project heavy course, and it gives a good opportunity to experiment different use cases with different algorithms.</description>
+    </item>
+    
+    <item>
+      <title>Non-Negative Matrix Factorization</title>
+      <link>https://amitab.github.io/post/nmf/</link>
+      <pubDate>Wed, 02 Oct 2019 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/post/nmf/</guid>
+      <description>Non-Negative Matrix Factorization I recently took the course “Multimedia and Web Databases” and we learnt to use feature reduction techniques to reduce the dimensionality of the multimedia data. This is done so that we can scan the entire database (relatively) fast for approximately similar data.
+One of our project tasks involved using NMF to find top ‘k’ images closest to a given image in the Euclidean space. Our project can be found here.</description>
+    </item>
+    
+    <item>
+      <title>Sentiment Analysis with Naivety</title>
+      <link>https://amitab.github.io/post/sentiment/</link>
+      <pubDate>Tue, 21 Jul 2015 18:34:02 +0000</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/post/sentiment/</guid>
+      <description>Back in my 6th Semeseter in the subject Theory and Foundation of Computaion and Automata, I was introduced to Conditional probability. I was excited to learn how I could use this to build something nice, and came across classifiers.
+Lets talk Naive Bayes&amp;hellip; a really naive implementation of a classifier.
+Applying conditional probability to ascertain the sentiment of a sentence is easy to achieve. The formula goes as follows:
+Let: WifS = Probability of word for a sentiment S = Probability of a sentiment X = WifS * S WifnotS = Probability of word for all sentiments except the one you&amp;#39;re looking for notS = Probability of all sentiments except the one you&amp;#39;re looking for Then, probability of a sentiment if word = X / ( X + WifnotS * notS) Next, all we do is multiply the probability we get above for each word and get the probability of a sentiment for a sentence.</description>
+    </item>
+    
+  </channel>
+</rss>

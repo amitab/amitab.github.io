@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Recommendation with Personalized Page Ranking - Core Dumps</title>
+  <meta name="description" content="Page Ranking Algorithm Page Ranking Algorithm is a graph-based algorithm. It’s an interesting technique to learn of the importance of nodes in a graph. Not only that, this algorithm can be modified to do cool things like finding importance based on custom criteria.
+This semester, I learnt about Page Ranking in a graduate course called “Multimedia and Web Databases”. It’s a project heavy course, and it gives a good opportunity to experiment different use cases with different algorithms.">
+  <meta name="author" content="Amitabh Das"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Core Dumps",
+    
+    "url": "https:\/\/amitab.github.io"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/amitab.github.io"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/amitab.github.io",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/amitab.github.io\/post\/ppr-rec\/",
+          "name": "Recommendation with personalized page ranking"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Amitabh Das"
+  },
+  "headline": "Recommendation with Personalized Page Ranking",
+  "description" : "Page Ranking Algorithm Page Ranking Algorithm is a graph-based algorithm. It’s an interesting technique to learn of the importance of nodes in a graph. Not only that, this algorithm can be modified to do cool things like finding importance based on custom criteria.\nThis semester, I learnt about Page Ranking in a graduate course called “Multimedia and Web Databases”. It’s a project heavy course, and it gives a good opportunity to experiment different use cases with different algorithms.",
+  "inLanguage" : "en",
+  "wordCount":  1017 ,
+  "datePublished" : "2019-11-05T18:00:00",
+  "dateModified" : "2019-11-05T18:00:00",
+  "image" : "https:\/\/amitab.github.io\/img\/portrait.jpg",
+  "keywords" : [ "machine learning, statistics" ],
+  "mainEntityOfPage" : "https:\/\/amitab.github.io\/post\/ppr-rec\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/amitab.github.io",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/amitab.github.io\/img\/portrait.jpg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Recommendation with Personalized Page Ranking" />
+<meta property="og:description" content="Page Ranking Algorithm Page Ranking Algorithm is a graph-based algorithm. It’s an interesting technique to learn of the importance of nodes in a graph. Not only that, this algorithm can be modified to do cool things like finding importance based on custom criteria.
+This semester, I learnt about Page Ranking in a graduate course called “Multimedia and Web Databases”. It’s a project heavy course, and it gives a good opportunity to experiment different use cases with different algorithms.">
+<meta property="og:image" content="https://amitab.github.io/img/portrait.jpg" />
+<meta property="og:url" content="https://amitab.github.io/post/ppr-rec/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Core Dumps" />
+
+  <meta name="twitter:title" content="Recommendation with Personalized Page Ranking" />
+  <meta name="twitter:description" content="Page Ranking Algorithm Page Ranking Algorithm is a graph-based algorithm. It’s an interesting technique to learn of the importance of nodes in a graph. Not only that, this algorithm can be modified to …">
+  <meta name="twitter:image" content="https://amitab.github.io/img/portrait.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <link href='https://amitab.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.75.1" />
+  <link rel="alternate" href="https://amitab.github.io/index.xml" type="application/rss+xml" title="Core Dumps">
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  
+
+  <link rel="stylesheet" href="https://amitab.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i|Roboto+Mono:300,400,500|Google+Sans:400,500,700|Material+Icons|Google+Sans+Display:400,500,700|Google+Sans+Text+Beta:400,500,700,400i,500i,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://amitab.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://amitab.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://amitab.github.io">$&nbsp;Core Dumps&nbsp;_</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Core Dumps" href="https://amitab.github.io">
+            <img class="avatar-img" src="https://amitab.github.io/img/portrait.jpg" alt="Core Dumps" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Recommendation with Personalized Page Ranking</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  
+  05/11/2019
+  
+  
+    &nbsp;<span class="material-icons">stop_circle</span>&nbsp;
+    
+      5&nbsp;min
+  
+  
+    &nbsp;<span class="material-icons">stop_circle</span>&nbsp;
+    
+    1017&nbsp;words
+  
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <h1 id="page-ranking-algorithm">Page Ranking Algorithm</h1>
+<p>Page Ranking Algorithm is a graph-based algorithm. It’s an interesting technique to learn of the importance of nodes in a graph. Not only that, this algorithm can be modified to do cool things like finding importance based on custom criteria.</p>
+<p>This semester, I learnt about Page Ranking in a graduate course called “Multimedia and Web Databases”. It’s a project heavy course, and it gives a good opportunity to experiment different use cases with different algorithms.</p>
+<p>The link to our project is <a href="https://github.com/ashmgarv/MWDB">here</a>.</p>
+<h2 id="recommending-similar-images-using-page-ranking">Recommending similar images using Page Ranking.</h2>
+<p>Let’s start with the most straight forward use case of Page Ranking. Feature vectors are used to describe images. These can be any sort of features extracted from images. In this experiment, <a href="https://en.wikipedia.org/wiki/Scale-invariant_feature_transform">SIFT</a> features of the image are used.</p>
+<h2 id="building-a-graph-from-feature-vectors">Building a graph from feature vectors</h2>
+<p>Our project had 6 tasks. In task 3, Personalized PageRank algorithm is to be used in order to find images similar to a given image.</p>
+<p>First, we must construct a similarity graph. We use the SIFT features along with some metadata of the images to construct an image-feature matrix. Euclidean distance metric is used to calculate the similarity between every pair of images. This forms the adjacency matrix, which can be though of as a graph with images as nodes and the similarity values as weights of the edges between each node.</p>
+<p>In our adjacency matrix, everything is connected to everything. That will not yield good results, since that will mean almost every node is of approximately the same importance in the graph.</p>
+<p>Here, we define a constant set of connections outgoing from every node – <code>k</code>. Let’s take <code>k</code> to be 5. Now we have about 400 images, each image A having connections to top <code>k</code> similar images (excluding itself, so no self-loops). This graph is represented as a matrix and is used as the transition matrix.</p>
+<p>This transition matrix is then normalized such that the outgoing weights from every vertex adds up to 1, which will help us to interpret the edge weight as probabilities. You can think of this as “<em>probability of going to image B from image A</em>” based on how similar the images are.</p>
+<h2 id="the-mathematical-representation-of-steady-state">The Mathematical representation of steady state</h2>
+<p>$$ \vec{\pi} = \vec{\pi} T \alpha + (1 - \alpha) \vec{s} $$</p>
+<p>Where,</p>
+<ul>
+<li>$$ \vec{\pi} $$ is the steady state vector</li>
+<li>$$ T $$ is the transition matrix (or in our case, the matrix representation of the graph we created)</li>
+<li>$$ \alpha $$ is the probability of random walk</li>
+<li>$$ \vec{s} $$ is the seed vector</li>
+</ul>
+<p>More information about this here. But the gist is this – imagine a person at one of the image nodes. If this person randomly moves from node to node though the edges we created between the nodes, we want to find out where the person is most likely to end up, based on the probabilities we set up earlier. That’s what the first half of the equation does. A steady state vector will be of the same size as the number of nodes (images) that we have and each value in the vector will provide us with the importance associated with each of the nodes. This is the core of Page Ranking.</p>
+<p>To calculate the steady state probability, we can use two ways:</p>
+<ol>
+<li>Power Iteration method (more info <a href="https://en.wikipedia.org/wiki/PageRank#Power_method">here</a>)</li>
+<li>Using inverse of the matrix (more info <a href="https://en.wikipedia.org/wiki/PageRank#Algebraic">here</a>)</li>
+</ol>
+<h2 id="thats-great-but-what-if-our-imaginary-person-in-the-graph-had-some-preferences">That’s great, but what if our imaginary person in the graph had some preferences?</h2>
+<p>Turns out, we can take this person’s preferences into consideration. Instead of just walking from node to node, we can assign a probability of randomly “teleporting” to a node preferred by the person in our graph (in this case, an image preferred by the person). So, now we have a probability of random walk and a probability of teleporting to a preferred node. This will provide more importance to the nodes around the persons preferred nodes. Intuitively, this is like how a user might watch a preferred YouTube video, then keeps going down the suggestions rabbit hole, and then switches back to his preferred video again, repeating this process for eternity.</p>
+<p>We can simulate the preferences using a seed vector in the equation. The seed vector is populated such that the vertices corresponding to the images preferred, have equal weightage by the walker for teleportation. Every other image preference is set to 0 in this seed vector.</p>
+<p>$$
+\vec{s_i}=
+\begin{cases}
+1, &amp; \text{if } i = \text{index of the image provided}\<br>
+0, &amp; \text{otherwise}
+\end{cases}
+$$</p>
+<p>Then the math takes care of the rest.</p>
+<h2 id="interpretation-of-the-results">Interpretation of the results</h2>
+<p>Using the power iteration method, we start with the seed vector as the initial state and attempt to find a steady state based on the above formula. The steady state obtained by this process is an approximation, not just because of the iterative nature of the algorithm, but also because of floating point approximations. In fact, the stopping condition compares the previous state to the current state using a small tolerance value epsilon. Based on observations, this is much faster than trying to calculate an inverse of a large matrix, which is often the case in such situations.</p>
+<p>The final steady state of every query has a high probability value for vertices closely connected with the input images. With an extremely high alpha value, the vertices directly connected to the preferred images have a comparatively higher probability values than the other vertices which are not directly connected to the provided images. A lower value of alpha could have increased the steady state probabilities of vertices indirectly connected to the vertices corresponding to the provided images.
+The value chosen for k also influences the results. If an edge from image B directly connected to any one of the provided image A were cut off, despite having a high similarity to image A, the steady state probability of the vertex corresponding to image B would not be as strong.</p>
+<p>Of course, the chosen feature model used to calculate the similarities also influence the results.</p>
+<p>More experiments with Page Ranking Algorithm coming up next.</p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://amitab.github.io/tags/machine-learning/">machine learning</a>&nbsp;
+            
+              <a href="https://amitab.github.io/tags/statistics/">statistics</a>&nbsp;
+            
+          </div>
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=https%3a%2f%2famitab.github.io%2fpost%2fppr-rec%2f&amp;text=Recommendation%20with%20Personalized%20Page%20Ranking&amp;via=" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2famitab.github.io%2fpost%2fppr-rec%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=https%3a%2f%2famitab.github.io%2fpost%2fppr-rec%2f&amp;title=Recommendation%20with%20Personalized%20Page%20Ranking" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2famitab.github.io%2fpost%2fppr-rec%2f&amp;title=Recommendation%20with%20Personalized%20Page%20Ranking" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2famitab.github.io%2fpost%2fppr-rec%2f&amp;title=Recommendation%20with%20Personalized%20Page%20Ranking" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2famitab.github.io%2fpost%2fppr-rec%2f&amp;description=Recommendation%20with%20Personalized%20Page%20Ranking" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+              </div>
+            </section>
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/ppr-clasification/">Classification with Personalized Page Ranking</a></li>
+                
+                    <li><a href="/post/ppr-feedback/">Relevance Feedback with Personalized Page Ranking</a></li>
+                
+                    <li><a href="/post/nmf/">Non-Negative Matrix Factorization</a></li>
+                
+                    <li><a href="/post/sentiment/">Sentiment Analysis with Naivety</a></li>
+                
+              </ul>
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://amitab.github.io/post/nmf/" data-toggle="tooltip" data-placement="top" title="Non-Negative Matrix Factorization">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://amitab.github.io/post/ppr-feedback/" data-toggle="tooltip" data-placement="top" title="Relevance Feedback with Personalized Page Ranking">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:adas59@asu.edu" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/amitab" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/amitab" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/thekeystroker" title="Instagram">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              Amitabh Das
+            
+          
+
+          &nbsp;&bull;&nbsp;
+          <span class="material-icons">copyright</span>
+          
+            2019
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://amitab.github.io">Core Dumps</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.75.1</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+onload="renderMathInElement(document.body);"></script><script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script src="https://amitab.github.io/js/main.js"></script>
+<script src="https://amitab.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js" integrity="sha256-4O4pS1SH31ZqrSO2A/2QJTVjTPqVe+jnYgOWUVr7EEc=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://amitab.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

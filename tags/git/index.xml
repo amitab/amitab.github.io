@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git on Core Dumps</title>
+    <link>https://amitab.github.io/tags/git/</link>
+    <description>Recent content in git on Core Dumps</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>adas59@asu.edu (Amitabh Das)</managingEditor>
+    <webMaster>adas59@asu.edu (Amitabh Das)</webMaster>
+    <lastBuildDate>Mon, 07 Dec 2015 18:00:00 +0730</lastBuildDate><atom:link href="https://amitab.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git Gud</title>
+      <link>https://amitab.github.io/post/git-gud/</link>
+      <pubDate>Mon, 07 Dec 2015 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/post/git-gud/</guid>
+      <description>After goofing around the last month, I suddenly had multiple bugs thrown at me. Well it came as a relief actually, since I was getting real bored of watching TV shows everyday.
+The Situation Alright so these guys here have a different way of working on the code base than the way I previously experienced in my internship.
+So we have a bug, and a main branch on to which our fix should go to.</description>
+    </item>
+    
+  </channel>
+</rss>

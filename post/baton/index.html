@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Passing the Baton - Core Dumps</title>
+  <meta name="description" content="In my last post I said that I would write about another design pattern for semaphores – passing the baton. This is the continuation of my previous post. Here is the link to my previous post: A Semaphore Story What we know Let’s look at the incorrect solution to the previous problem.
+mutex.wait() # Case 3. Wait for table_empty signal if customers == 5 || waiting &gt; 0: waiting &#43;= 1 mutex.">
+  <meta name="author" content="Amitabh Das"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Core Dumps",
+    
+    "url": "https:\/\/amitab.github.io"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/amitab.github.io"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/amitab.github.io",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/amitab.github.io\/post\/baton\/",
+          "name": "Passing the baton"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Amitabh Das"
+  },
+  "headline": "Passing the Baton",
+  "description" : "In my last post I said that I would write about another design pattern for semaphores – passing the baton. This is the continuation of my previous post. Here is the link to my previous post: A Semaphore Story What we know Let’s look at the incorrect solution to the previous problem.\nmutex.wait() # Case 3. Wait for table_empty signal if customers == 5 || waiting \u0026gt; 0: waiting \u002b= 1 mutex.",
+  "inLanguage" : "en",
+  "wordCount":  828 ,
+  "datePublished" : "2016-07-11T18:00:00",
+  "dateModified" : "2016-07-11T18:00:00",
+  "image" : "https:\/\/amitab.github.io\/img\/portrait.jpg",
+  "keywords" : [ "interview, semaphores" ],
+  "mainEntityOfPage" : "https:\/\/amitab.github.io\/post\/baton\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/amitab.github.io",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/amitab.github.io\/img\/portrait.jpg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Passing the Baton" />
+<meta property="og:description" content="In my last post I said that I would write about another design pattern for semaphores – passing the baton. This is the continuation of my previous post. Here is the link to my previous post: A Semaphore Story What we know Let’s look at the incorrect solution to the previous problem.
+mutex.wait() # Case 3. Wait for table_empty signal if customers == 5 || waiting &gt; 0: waiting &#43;= 1 mutex.">
+<meta property="og:image" content="https://amitab.github.io/img/portrait.jpg" />
+<meta property="og:url" content="https://amitab.github.io/post/baton/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Core Dumps" />
+
+  <meta name="twitter:title" content="Passing the Baton" />
+  <meta name="twitter:description" content="In my last post I said that I would write about another design pattern for semaphores – passing the baton. This is the continuation of my previous post. Here is the link to my previous post: A …">
+  <meta name="twitter:image" content="https://amitab.github.io/img/portrait.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <link href='https://amitab.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.75.1" />
+  <link rel="alternate" href="https://amitab.github.io/index.xml" type="application/rss+xml" title="Core Dumps">
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  
+
+  <link rel="stylesheet" href="https://amitab.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i|Roboto+Mono:300,400,500|Google+Sans:400,500,700|Material+Icons|Google+Sans+Display:400,500,700|Google+Sans+Text+Beta:400,500,700,400i,500i,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://amitab.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://amitab.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://amitab.github.io">$&nbsp;Core Dumps&nbsp;_</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Core Dumps" href="https://amitab.github.io">
+            <img class="avatar-img" src="https://amitab.github.io/img/portrait.jpg" alt="Core Dumps" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Passing the Baton</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  
+  11/07/2016
+  
+  
+    &nbsp;<span class="material-icons">stop_circle</span>&nbsp;
+    
+      4&nbsp;min
+  
+  
+    &nbsp;<span class="material-icons">stop_circle</span>&nbsp;
+    
+    828&nbsp;words
+  
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>In my last post I said that I would write about another design pattern for semaphores – passing the baton. This is the continuation of my previous post. Here is the link to my previous post:  <a href="/posts/semaphore">A Semaphore Story</a> </p>
+<h1 id="what-we-know">What we know</h1>
+<p>Let’s look at the incorrect solution to the previous problem.</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">mutex.wait()
+# Case 3. Wait for table_empty signal
+if customers == 5 || waiting &gt; 0:
+    waiting += 1
+    mutex.signal()
+    table_empty.wait()
+
+  # Take mutex again since you need to modify variables
+    mutex.wait()
+    waiting -= 1    # Need to re-acquire mutex again
+    customers += 1    # New customers could take it first
+    mutex.signal()
+
+# Case 1 and Case 2
+else:
+    customers += 1
+    mutex.signal()
+
+# oh yeah
+EAT()
+
+mutex.wait()
+customers -= 1
+# Once customers count is down to 0, send table_empty signal
+if customers == 0:
+    table_empty.signal(min(5, waiting))
+mutex.signal()
+</code></pre></div><h1 id="so-what-was-the-problem">So, what was the problem?</h1>
+<p>The flaw in this solution is that the waiting customers (blocked processes) may not be able to take a seat at the table because the new customers (new processes) may beat them to it. This happens when the customer is waiting on <code>table_empty</code> and then again needs to wait on <code>mutex</code> to modify the variables: <code>waiting</code> and <code>customers</code>.</p>
+<p>In the previous post, the last customer while leaving, would acquire the lock on <code>mutex</code> and would unblock the waiting customers to enter the table. And thus, re-acquiring the lock on <code>mutex</code> would no longer be needed.</p>
+<h1 id="whats-passing-the-baton">What’s passing the baton?</h1>
+<p>Passing the baton solves the same problem - re-acquiring the lock on <code>mutex</code>.</p>
+<p>Imagine the runners in a relay race. Each runner passes the baton to the next one, then the new runner would pass the baton on to the next runner and so on till they reach the end. Similarly, we could acquire the lock in one process and release it in another process!</p>
+<p>Of course, semaphores were not meant to be used this way but as long as the two processes make sure that they are coordinating, it will work.</p>
+<h1 id="you-shall-pass">You shall pass!</h1>
+<p>In our problem, we can have the last customer to not release the lock on <code>mutex</code> and unblock the next customer waiting in line. And the next customer would modify the variables without needing to take on the lock, just like the runner passing the baton (in this case, we are passing the lock on <code>mutex</code> to the next process). And now, this new customer would check if the table still has seats remaining and if there are customers waiting. If yes, then he would wake up the next waiting customer and the process repeats till we reach the last waiting customer, who would call <code>mutex.signal()</code> finally releasing the lock on <code>mutex</code> so that the new customers can now try and acquire the lock.</p>
+<p>The modified solution would look something like this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">mutex.wait()
+# Case 3. Wait for table_empty signal
+if customers == 5 || waiting &gt; 0:
+    waiting += 1
+    mutex.signal()
+    table_empty.wait()
+    # We already have the lock at this point
+    waiting -= 1
+
+customers += 1
+
+# Pass the lock on to other waiting customers if there 
+# is a place at the table
+if waiting &gt; 0 &amp;&amp; customers &lt; 5:
+    table_empty.signal()
+else:
+# Coming here means that there are no waiting customers
+# And we can finally release mutex
+    mutex.signal()
+
+# oh yeah
+EAT()
+
+mutex.wait()
+customers -= 1
+# last customer passes lock if there are waiting customers
+if customers == 0 &amp;&amp; waiting &gt; 0:
+    table_empty.signal()
+else: 
+# Coming here means that there are no waiting customers
+# And we can finally release mutex
+    mutex.signal()
+</code></pre></div><h1 id="conclusion">Conclusion</h1>
+<p>Think of the <em>mutex</em> as a pen. Each customer takes the pen to write down his name and details in the register of the restaurant while entering. And each have to sign off as they leave. Each time they take the pen, they return it to the waiter at the restaurant.</p>
+<p><strong>THERE IS ONLY ONE PEN!</strong> Whoever gets to the pen first is allowed to use it. Waiter has no idea of the people who are waiting and when he has the pen, he could give the pen to whoever is asking for the pen at the very next moment. Now the above problem can be solved in two steps.</p>
+<ol>
+<li>Customer comes in. If table is full, he waits for table to become empty else he takes the pen from waiter or from another customer and enters his details in the register. If there is no space at the table, he has to give the pen back to the waiter else he passes the pen on to one of the waiting customers or back to the waiter if there is no one waiting.</li>
+<li>After customer is done eating, take the pen from waiter and sign off. If he is the last one at the table, he passes the pen on to one of the waiting customers or back to the waiter if there is no one waiting.</li>
+</ol>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://amitab.github.io/tags/interview/">interview</a>&nbsp;
+            
+              <a href="https://amitab.github.io/tags/semaphores/">semaphores</a>&nbsp;
+            
+          </div>
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=https%3a%2f%2famitab.github.io%2fpost%2fbaton%2f&amp;text=Passing%20the%20Baton&amp;via=" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2famitab.github.io%2fpost%2fbaton%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=https%3a%2f%2famitab.github.io%2fpost%2fbaton%2f&amp;title=Passing%20the%20Baton" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2famitab.github.io%2fpost%2fbaton%2f&amp;title=Passing%20the%20Baton" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2famitab.github.io%2fpost%2fbaton%2f&amp;title=Passing%20the%20Baton" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2famitab.github.io%2fpost%2fbaton%2f&amp;description=Passing%20the%20Baton" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+              </div>
+            </section>
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/semaphore/">A Semaphore Story</a></li>
+                
+              </ul>
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://amitab.github.io/post/semaphore/" data-toggle="tooltip" data-placement="top" title="A Semaphore Story">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://amitab.github.io/post/lost/" data-toggle="tooltip" data-placement="top" title="Lost and Found">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:adas59@asu.edu" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/amitab" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/amitab" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/thekeystroker" title="Instagram">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              Amitabh Das
+            
+          
+
+          &nbsp;&bull;&nbsp;
+          <span class="material-icons">copyright</span>
+          
+            2019
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://amitab.github.io">Core Dumps</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.75.1</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+onload="renderMathInElement(document.body);"></script><script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script src="https://amitab.github.io/js/main.js"></script>
+<script src="https://amitab.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js" integrity="sha256-4O4pS1SH31ZqrSO2A/2QJTVjTPqVe+jnYgOWUVr7EEc=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://amitab.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

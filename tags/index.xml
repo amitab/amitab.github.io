@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Core Dumps</title>
+    <link>https://amitab.github.io/tags/</link>
+    <description>Recent content in Tags on Core Dumps</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>adas59@asu.edu (Amitabh Das)</managingEditor>
+    <webMaster>adas59@asu.edu (Amitabh Das)</webMaster>
+    <lastBuildDate>Sun, 08 Dec 2019 18:00:00 +0730</lastBuildDate><atom:link href="https://amitab.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>machine learning</title>
+      <link>https://amitab.github.io/tags/machine-learning/</link>
+      <pubDate>Sun, 08 Dec 2019 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>statistics</title>
+      <link>https://amitab.github.io/tags/statistics/</link>
+      <pubDate>Sun, 08 Dec 2019 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/tags/statistics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fzf</title>
+      <link>https://amitab.github.io/tags/fzf/</link>
+      <pubDate>Fri, 28 Jul 2017 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/tags/fzf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>plugin</title>
+      <link>https://amitab.github.io/tags/plugin/</link>
+      <pubDate>Fri, 28 Jul 2017 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/tags/plugin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://amitab.github.io/tags/python/</link>
+      <pubDate>Fri, 17 Mar 2017 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>version management</title>
+      <link>https://amitab.github.io/tags/version-management/</link>
+      <pubDate>Fri, 17 Mar 2017 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/tags/version-management/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>virtualenv</title>
+      <link>https://amitab.github.io/tags/virtualenv/</link>
+      <pubDate>Fri, 17 Mar 2017 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/tags/virtualenv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>testing</title>
+      <link>https://amitab.github.io/tags/testing/</link>
+      <pubDate>Mon, 02 Jan 2017 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/tags/testing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bash</title>
+      <link>https://amitab.github.io/tags/bash/</link>
+      <pubDate>Thu, 22 Sep 2016 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/tags/bash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>script</title>
+      <link>https://amitab.github.io/tags/script/</link>
+      <pubDate>Thu, 22 Sep 2016 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/tags/script/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>interview</title>
+      <link>https://amitab.github.io/tags/interview/</link>
+      <pubDate>Mon, 11 Jul 2016 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/tags/interview/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>semaphores</title>
+      <link>https://amitab.github.io/tags/semaphores/</link>
+      <pubDate>Mon, 11 Jul 2016 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/tags/semaphores/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>environment</title>
+      <link>https://amitab.github.io/tags/environment/</link>
+      <pubDate>Tue, 19 Apr 2016 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/tags/environment/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>javascript</title>
+      <link>https://amitab.github.io/tags/javascript/</link>
+      <pubDate>Tue, 19 Apr 2016 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>this</title>
+      <link>https://amitab.github.io/tags/this/</link>
+      <pubDate>Tue, 19 Apr 2016 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/tags/this/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>atom</title>
+      <link>https://amitab.github.io/tags/atom/</link>
+      <pubDate>Thu, 03 Mar 2016 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/tags/atom/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>code editors</title>
+      <link>https://amitab.github.io/tags/code-editors/</link>
+      <pubDate>Wed, 10 Feb 2016 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/tags/code-editors/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vim</title>
+      <link>https://amitab.github.io/tags/vim/</link>
+      <pubDate>Wed, 10 Feb 2016 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/tags/vim/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>https://amitab.github.io/tags/git/</link>
+      <pubDate>Mon, 07 Dec 2015 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>css</title>
+      <link>https://amitab.github.io/tags/css/</link>
+      <pubDate>Mon, 26 Oct 2015 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/tags/css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>flex</title>
+      <link>https://amitab.github.io/tags/flex/</link>
+      <pubDate>Mon, 26 Oct 2015 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/tags/flex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ui</title>
+      <link>https://amitab.github.io/tags/ui/</link>
+      <pubDate>Sat, 12 Sep 2015 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/tags/ui/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ux</title>
+      <link>https://amitab.github.io/tags/ux/</link>
+      <pubDate>Sat, 12 Sep 2015 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/tags/ux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web development</title>
+      <link>https://amitab.github.io/tags/web-development/</link>
+      <pubDate>Sat, 12 Sep 2015 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/tags/web-development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>firewall</title>
+      <link>https://amitab.github.io/tags/firewall/</link>
+      <pubDate>Thu, 27 Aug 2015 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/tags/firewall/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>proxy</title>
+      <link>https://amitab.github.io/tags/proxy/</link>
+      <pubDate>Thu, 27 Aug 2015 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/tags/proxy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>naive bayes</title>
+      <link>https://amitab.github.io/tags/naive-bayes/</link>
+      <pubDate>Tue, 21 Jul 2015 18:34:02 +0000</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/tags/naive-bayes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>probabilistic prediction</title>
+      <link>https://amitab.github.io/tags/probabilistic-prediction/</link>
+      <pubDate>Tue, 21 Jul 2015 18:34:02 +0000</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/tags/probabilistic-prediction/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

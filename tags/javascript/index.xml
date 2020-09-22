@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>javascript on Core Dumps</title>
+    <link>https://amitab.github.io/tags/javascript/</link>
+    <description>Recent content in javascript on Core Dumps</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>adas59@asu.edu (Amitabh Das)</managingEditor>
+    <webMaster>adas59@asu.edu (Amitabh Das)</webMaster>
+    <lastBuildDate>Tue, 19 Apr 2016 18:00:00 +0730</lastBuildDate><atom:link href="https://amitab.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Javascript - &#34;this&#34; is awesome</title>
+      <link>https://amitab.github.io/post/this/</link>
+      <pubDate>Tue, 19 Apr 2016 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/post/this/</guid>
+      <description>For those of you coming from the Java, C++ side of programming, this keyword is bound to trip you sometime. In programming languages such as C++, you use it in context of classes and objects.
+Does that mean JavaScript has classes? Yes and No. You can emulate classes in JavaScript but calling them classes is as good as calling tomato a vegetable. Although according ECMAScript 2015 (ES6) standards, classes have been introduced to JavaScript.</description>
+    </item>
+    
+  </channel>
+</rss>

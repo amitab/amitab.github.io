@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>environment on Core Dumps</title>
+    <link>https://amitab.github.io/tags/environment/</link>
+    <description>Recent content in environment on Core Dumps</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>adas59@asu.edu (Amitabh Das)</managingEditor>
+    <webMaster>adas59@asu.edu (Amitabh Das)</webMaster>
+    <lastBuildDate>Tue, 19 Apr 2016 18:00:00 +0730</lastBuildDate><atom:link href="https://amitab.github.io/tags/environment/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Testing, Testing... 1, 2, 3</title>
+      <link>https://amitab.github.io/post/testing/</link>
+      <pubDate>Tue, 19 Apr 2016 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/post/testing/</guid>
+      <description>I am a developer. I don’t care about testing. – The young developer
+ Of course it starts like that. And right when you are presenting your project in front of others, you realize that the feature isn’t working. My god, what a terrifying situation.
+Then you realize the importance of testing. You find out about the different types of testing, and how you wish that you had written tests for each feature/fix you committed so that the problem would have been caught immediately.</description>
+    </item>
+    
+  </channel>
+</rss>

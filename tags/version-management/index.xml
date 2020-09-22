@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>version management on Core Dumps</title>
+    <link>https://amitab.github.io/tags/version-management/</link>
+    <description>Recent content in version management on Core Dumps</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>adas59@asu.edu (Amitabh Das)</managingEditor>
+    <webMaster>adas59@asu.edu (Amitabh Das)</webMaster>
+    <lastBuildDate>Fri, 17 Mar 2017 18:00:00 +0730</lastBuildDate><atom:link href="https://amitab.github.io/tags/version-management/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Versions of madness</title>
+      <link>https://amitab.github.io/post/versions/</link>
+      <pubDate>Fri, 17 Mar 2017 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/post/versions/</guid>
+      <description>Does your product support multiple versions of a particular language? Older versions of that language? (I feel you bruh)
+I work on a product which supports multiple versions of python. Now don’t get me wrong, python is an amazing language. Currently, we are supporting 2.7.x and 3.3.x.
+Like that wasn’t enough, there are a few hair-ripping changes from versions &amp;lt; 2.7.9 which I discovered recently. SSL is a total wreck in 2.</description>
+    </item>
+    
+    <item>
+      <title>Git Gud</title>
+      <link>https://amitab.github.io/post/git-gud/</link>
+      <pubDate>Mon, 07 Dec 2015 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/post/git-gud/</guid>
+      <description>After goofing around the last month, I suddenly had multiple bugs thrown at me. Well it came as a relief actually, since I was getting real bored of watching TV shows everyday.
+The Situation Alright so these guys here have a different way of working on the code base than the way I previously experienced in my internship.
+So we have a bug, and a main branch on to which our fix should go to.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>proxy on Core Dumps</title>
+    <link>https://amitab.github.io/tags/proxy/</link>
+    <description>Recent content in proxy on Core Dumps</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>adas59@asu.edu (Amitabh Das)</managingEditor>
+    <webMaster>adas59@asu.edu (Amitabh Das)</webMaster>
+    <lastBuildDate>Thu, 27 Aug 2015 18:00:00 +0730</lastBuildDate><atom:link href="https://amitab.github.io/tags/proxy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Proxy Problems</title>
+      <link>https://amitab.github.io/post/proxy/</link>
+      <pubDate>Thu, 27 Aug 2015 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/post/proxy/</guid>
+      <description>Just completed the campus to corporate training at Oracle MySQL and ready to start! At the end of our training, we were given a task to complete to “refresh our C++ skills”.
+We were to design a program which would simulate MySQL on a smaller scale – Multiple clients, shared data structures, locks and a few more features.
+Of course I started off almost immediately but I came across a problem.</description>
+    </item>
+    
+  </channel>
+</rss>

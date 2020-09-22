@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>code editors on Core Dumps</title>
+    <link>https://amitab.github.io/tags/code-editors/</link>
+    <description>Recent content in code editors on Core Dumps</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>adas59@asu.edu (Amitabh Das)</managingEditor>
+    <webMaster>adas59@asu.edu (Amitabh Das)</webMaster>
+    <lastBuildDate>Wed, 10 Feb 2016 18:00:00 +0730</lastBuildDate><atom:link href="https://amitab.github.io/tags/code-editors/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vim - The programmable editors</title>
+      <link>https://amitab.github.io/post/vim/</link>
+      <pubDate>Wed, 10 Feb 2016 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/post/vim/</guid>
+      <description>The first lines of code I ever wrote was in an editor which had plenty of the features bundled in. But the funny thing was that you would never use most of them.
+The code editor I am talking about is Eclipse. Now don&amp;rsquo;t get me wrong, it is an awesome code editor. It&amp;rsquo;s just that it was memory intensive and and because of that it ran slow. And my PC isn&amp;rsquo;t something I can boast about.</description>
+    </item>
+    
+  </channel>
+</rss>

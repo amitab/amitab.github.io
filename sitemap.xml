@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://amitab.github.io/post/ppr-clasification/</loc>
+    <lastmod>2019-12-08T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/</loc>
+    <lastmod>2019-12-08T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/tags/machine-learning/</loc>
+    <lastmod>2019-12-08T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/post/</loc>
+    <lastmod>2019-12-08T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/tags/statistics/</loc>
+    <lastmod>2019-12-08T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/tags/</loc>
+    <lastmod>2019-12-08T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/post/ppr-feedback/</loc>
+    <lastmod>2019-11-20T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/post/ppr-rec/</loc>
+    <lastmod>2019-11-05T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/post/nmf/</loc>
+    <lastmod>2019-10-02T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/tags/fzf/</loc>
+    <lastmod>2017-07-28T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/post/fzf/</loc>
+    <lastmod>2017-07-28T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/tags/plugin/</loc>
+    <lastmod>2017-07-28T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/tags/python/</loc>
+    <lastmod>2017-03-17T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/tags/version-management/</loc>
+    <lastmod>2017-03-17T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/post/versions/</loc>
+    <lastmod>2017-03-17T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/tags/virtualenv/</loc>
+    <lastmod>2017-03-17T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/post/repro/</loc>
+    <lastmod>2017-01-02T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/tags/testing/</loc>
+    <lastmod>2017-01-02T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/tags/bash/</loc>
+    <lastmod>2016-09-22T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/post/lost/</loc>
+    <lastmod>2016-09-22T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/tags/script/</loc>
+    <lastmod>2016-09-22T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/tags/interview/</loc>
+    <lastmod>2016-07-11T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/post/baton/</loc>
+    <lastmod>2016-07-11T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/tags/semaphores/</loc>
+    <lastmod>2016-07-11T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/post/semaphore/</loc>
+    <lastmod>2016-06-08T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/tags/environment/</loc>
+    <lastmod>2016-04-19T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/tags/javascript/</loc>
+    <lastmod>2016-04-19T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/post/this/</loc>
+    <lastmod>2016-04-19T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/post/testing/</loc>
+    <lastmod>2016-04-19T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/tags/this/</loc>
+    <lastmod>2016-04-19T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/post/atom/</loc>
+    <lastmod>2016-03-03T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/tags/atom/</loc>
+    <lastmod>2016-03-03T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/tags/code-editors/</loc>
+    <lastmod>2016-02-10T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/tags/vim/</loc>
+    <lastmod>2016-02-10T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/post/vim/</loc>
+    <lastmod>2016-02-10T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/tags/git/</loc>
+    <lastmod>2015-12-07T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/post/git-gud/</loc>
+    <lastmod>2015-12-07T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/tags/css/</loc>
+    <lastmod>2015-10-26T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/tags/flex/</loc>
+    <lastmod>2015-10-26T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/post/line-it-up/</loc>
+    <lastmod>2015-10-26T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/post/you-ui/</loc>
+    <lastmod>2015-09-12T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/tags/ui/</loc>
+    <lastmod>2015-09-12T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/tags/ux/</loc>
+    <lastmod>2015-09-12T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/tags/web-development/</loc>
+    <lastmod>2015-09-12T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/tags/firewall/</loc>
+    <lastmod>2015-08-27T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/tags/proxy/</loc>
+    <lastmod>2015-08-27T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/post/proxy/</loc>
+    <lastmod>2015-08-27T18:00:00+07:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/tags/naive-bayes/</loc>
+    <lastmod>2015-07-21T18:34:02+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/tags/probabilistic-prediction/</loc>
+    <lastmod>2015-07-21T18:34:02+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/post/sentiment/</loc>
+    <lastmod>2015-07-21T18:34:02+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/page/about/</loc>
+    <lastmod>2014-11-08T16:42:18+04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/page/</loc>
+    <lastmod>2014-11-08T16:42:18+04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amitab.github.io/categories/</loc>
+  </url>
+  
+</urlset>

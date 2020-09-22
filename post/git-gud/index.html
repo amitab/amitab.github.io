@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Git Gud - Core Dumps</title>
+  <meta name="description" content="After goofing around the last month, I suddenly had multiple bugs thrown at me. Well it came as a relief actually, since I was getting real bored of watching TV shows everyday.
+The Situation Alright so these guys here have a different way of working on the code base than the way I previously experienced in my internship.
+So we have a bug, and a main branch on to which our fix should go to.">
+  <meta name="author" content="Amitabh Das"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Core Dumps",
+    
+    "url": "https:\/\/amitab.github.io"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/amitab.github.io"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/amitab.github.io",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/amitab.github.io\/post\/git-gud\/",
+          "name": "Git gud"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Amitabh Das"
+  },
+  "headline": "Git Gud",
+  "description" : "After goofing around the last month, I suddenly had multiple bugs thrown at me. Well it came as a relief actually, since I was getting real bored of watching TV shows everyday.\nThe Situation Alright so these guys here have a different way of working on the code base than the way I previously experienced in my internship.\nSo we have a bug, and a main branch on to which our fix should go to.",
+  "inLanguage" : "en",
+  "wordCount":  405 ,
+  "datePublished" : "2015-12-07T18:00:00",
+  "dateModified" : "2015-12-07T18:00:00",
+  "image" : "https:\/\/amitab.github.io\/img\/portrait.jpg",
+  "keywords" : [ "git, version management" ],
+  "mainEntityOfPage" : "https:\/\/amitab.github.io\/post\/git-gud\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/amitab.github.io",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/amitab.github.io\/img\/portrait.jpg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Git Gud" />
+<meta property="og:description" content="After goofing around the last month, I suddenly had multiple bugs thrown at me. Well it came as a relief actually, since I was getting real bored of watching TV shows everyday.
+The Situation Alright so these guys here have a different way of working on the code base than the way I previously experienced in my internship.
+So we have a bug, and a main branch on to which our fix should go to.">
+<meta property="og:image" content="https://amitab.github.io/img/portrait.jpg" />
+<meta property="og:url" content="https://amitab.github.io/post/git-gud/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Core Dumps" />
+
+  <meta name="twitter:title" content="Git Gud" />
+  <meta name="twitter:description" content="After goofing around the last month, I suddenly had multiple bugs thrown at me. Well it came as a relief actually, since I was getting real bored of watching TV shows everyday.
+The Situation Alright …">
+  <meta name="twitter:image" content="https://amitab.github.io/img/portrait.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <link href='https://amitab.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.75.1" />
+  <link rel="alternate" href="https://amitab.github.io/index.xml" type="application/rss+xml" title="Core Dumps">
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  
+
+  <link rel="stylesheet" href="https://amitab.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i|Roboto+Mono:300,400,500|Google+Sans:400,500,700|Material+Icons|Google+Sans+Display:400,500,700|Google+Sans+Text+Beta:400,500,700,400i,500i,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://amitab.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://amitab.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://amitab.github.io">$&nbsp;Core Dumps&nbsp;_</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Core Dumps" href="https://amitab.github.io">
+            <img class="avatar-img" src="https://amitab.github.io/img/portrait.jpg" alt="Core Dumps" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Git Gud</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  
+  07/12/2015
+  
+  
+    &nbsp;<span class="material-icons">stop_circle</span>&nbsp;
+    
+      2&nbsp;min
+  
+  
+    &nbsp;<span class="material-icons">stop_circle</span>&nbsp;
+    
+    405&nbsp;words
+  
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>After goofing around the last month, I suddenly had multiple bugs thrown at me. Well it came as a relief actually, since I was getting real bored of watching TV shows everyday.</p>
+<h1 id="the-situation">The Situation</h1>
+<p>Alright so these guys here have a different way of working on the code base than the way I previously experienced in my internship.</p>
+<p>So we have a bug, and a main branch on to which our fix should go to. I create the fix and then create a patch to apply to the main branch. Working on multiple bugs means I need multiple branches. And make a patch with respect to the parent branch of this bug branch after I am done with the fix.</p>
+<pre><code>git checkout -b [bug branch]
+git diff [original branch]..[bug branch] &gt; patch.diff
+</code></pre>
+<h1 id="the-problem---so-many-bugs-so-little-time">The Problem - So many bugs, so little time</h1>
+<p><img src="https://78.media.tumblr.com/efcb563b12d9b6796a9393add5726f8f/tumblr_inline_nxghvxfwDD1tb0x0k_540.jpg" alt="image"></p>
+<p>I have a bunch of local repositories that I am working on, with each of them forked at different points of commits. I wanted to find a way to keep a track of these commits so that patch generation is as simple as:</p>
+<pre><code>g patch
+</code></pre>
+<h1 id="the-solution">The Solution</h1>
+<p>The answer was <code>git-reflog</code>. <code>git-reflog</code>&rsquo;s shows the change history of HEAD in your repo. Here is what I did:</p>
+<pre><code>git reflog show --pretty=format:%H [bug_branch]
+</code></pre>
+<p>And the last entry of this output was the commit hash when the brach was first created! Now I just need to record this and find the diff between this commit hash and the current commit hash of my bug branch and we have a patch!</p>
+<p>I needed to find a way to automate this process – to be able to execute all these commands in one go. On top of that I need to keep track of the original branch of the bug branch. So I wrote a bash script wrapper over git to automate this.</p>
+<p>Here is the link: <a href="https://github.com/amitab/git-wrapper-bash">git-wrapper</a></p>
+<h1 id="the-end">The End</h1>
+<p>Of course the commands I wrote were verbose, but I finally managed to get custom auto-complete working for my bash script, so just press tab and you got yourself a time-saving script for branch control and patch generation!</p>
+<p><strong>EDIT:</strong>
+I&rsquo;ve been researching some more on this git-reflog. Turns out this has an expiry time. This was unreliable so I had to ditch it. Currently I create a DAG of all the commits and try to pin-point the first commit of the branch. The updated code is in the repository.</p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://amitab.github.io/tags/git/">git</a>&nbsp;
+            
+              <a href="https://amitab.github.io/tags/version-management/">version management</a>&nbsp;
+            
+          </div>
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=https%3a%2f%2famitab.github.io%2fpost%2fgit-gud%2f&amp;text=Git%20Gud&amp;via=" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2famitab.github.io%2fpost%2fgit-gud%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=https%3a%2f%2famitab.github.io%2fpost%2fgit-gud%2f&amp;title=Git%20Gud" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2famitab.github.io%2fpost%2fgit-gud%2f&amp;title=Git%20Gud" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2famitab.github.io%2fpost%2fgit-gud%2f&amp;title=Git%20Gud" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2famitab.github.io%2fpost%2fgit-gud%2f&amp;description=Git%20Gud" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+              </div>
+            </section>
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/versions/">Versions of madness</a></li>
+                
+              </ul>
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://amitab.github.io/post/line-it-up/" data-toggle="tooltip" data-placement="top" title="Line up all the things!">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://amitab.github.io/post/vim/" data-toggle="tooltip" data-placement="top" title="Vim - The programmable editors">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:adas59@asu.edu" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/amitab" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/amitab" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/thekeystroker" title="Instagram">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              Amitabh Das
+            
+          
+
+          &nbsp;&bull;&nbsp;
+          <span class="material-icons">copyright</span>
+          
+            2019
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://amitab.github.io">Core Dumps</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.75.1</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+onload="renderMathInElement(document.body);"></script><script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script src="https://amitab.github.io/js/main.js"></script>
+<script src="https://amitab.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script>
+<script>
+  window.WebFontConfig = {
+    custom: {
+      families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+        'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+        'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+        'KaTeX_Size4', 'KaTeX_Typewriter'],
+    },
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js" integrity="sha256-4O4pS1SH31ZqrSO2A/2QJTVjTPqVe+jnYgOWUVr7EEc=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://amitab.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

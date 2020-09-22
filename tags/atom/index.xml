@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>atom on Core Dumps</title>
+    <link>https://amitab.github.io/tags/atom/</link>
+    <description>Recent content in atom on Core Dumps</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>adas59@asu.edu (Amitabh Das)</managingEditor>
+    <webMaster>adas59@asu.edu (Amitabh Das)</webMaster>
+    <lastBuildDate>Thu, 03 Mar 2016 18:00:00 +0730</lastBuildDate><atom:link href="https://amitab.github.io/tags/atom/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Adventures with Atom</title>
+      <link>https://amitab.github.io/post/atom/</link>
+      <pubDate>Thu, 03 Mar 2016 18:00:00 +0730</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/post/atom/</guid>
+      <description>Quite recently I came across this new Text Editor by Github, called the Atom editor. Everything from its description to its UI was eye catching and I really wanted to give it a shot.
+And&amp;hellip;
+My thoughts What I loved the most about atom was its community. They have got a plethora of packages, providing a host of features to improve and speed up your daily tasks. For example – They have got a Git plugin (since it’s from Github) and with the right key bindings, you don’t ever have to look at a terminal!</description>
+    </item>
+    
+  </channel>
+</rss>

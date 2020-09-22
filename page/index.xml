@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Core Dumps</title>
+    <link>https://amitab.github.io/page/</link>
+    <description>Recent content in Pages on Core Dumps</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>adas59@asu.edu (Amitabh Das)</managingEditor>
+    <webMaster>adas59@asu.edu (Amitabh Das)</webMaster>
+    <lastBuildDate>Sat, 08 Nov 2014 16:42:18 +0400</lastBuildDate><atom:link href="https://amitab.github.io/page/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>https://amitab.github.io/page/about/</link>
+      <pubDate>Sat, 08 Nov 2014 16:42:18 +0400</pubDate>
+      <author>adas59@asu.edu (Amitabh Das)</author>
+      <guid>https://amitab.github.io/page/about/</guid>
+      <description>Hello, I&amp;rsquo;m Amitabh Das I am a Computer Science Graduate student at Arizona State University. I completed my Undergraduate in BMS College of Engineering, Bangalore in 2015, with a major in Information Science.
+From the end of my Undergrad to the start of Grad School, I was working at Oracle, MySQL. Here, I got the chance to explore different areas of Computer Science. I found myself particularly interested in Storage/Database Systems and Distributed Systems.</description>
+    </item>
+    
+  </channel>
+</rss>
